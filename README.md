@@ -31,7 +31,7 @@ To deploy this project run:
 ```
 
 
-## Authors
+## Author
 
 - [Engr. Kirk Alyn Santos](https://github.com/kirkalyn13)
 

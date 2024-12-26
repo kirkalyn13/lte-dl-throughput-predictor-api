@@ -18,7 +18,8 @@ This relationship is also evident when analyzing real-world LTE site data, as de
 ![PRB Utilization vs. Download Throughput](assets/prb-vs-dltput.png)
 
 Given this observed correlation, a **Linear Regression** approach was used to train the predictive model.
-This relationship is also observed upon analyzing the available real world data for LTE sites.
+
+This model can be utilized to analyze site metrics and optimize 4G network performance, enabling more efficient resource allocation and improved user experience.
 
 ## Deployment
 

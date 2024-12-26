@@ -21,10 +21,6 @@ This relationship is also evident when analyzing real-world LTE site data, as de
 Given this observed correlation, a **Linear Regression** approach was used to train the predictive model.
 This relationship is also observed upon analyzing the available real world data for LTE sites, as seen below:
 
-![Project Screenshot](assets/prb-vs-dltput.png)
-
-Based on the observed relationship, Linear Regression was used to train the model
-
 ## Deployment
 
 To deploy this project run:

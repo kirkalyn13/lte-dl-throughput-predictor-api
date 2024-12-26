@@ -6,7 +6,7 @@ model = joblib.load("app/model.joblib")
 
 app = FastAPI()
 
-@app.get('/')
+@app.get('/api/v1')
 def read_root():
     """
     Provide API information.
@@ -14,9 +14,9 @@ def read_root():
     Returns:
         dict: A dictionary containing the API info.
     """
-    return {'message':'LTE DL Throughput Predictor API'}
+    return {'message':'LTE Download Throughput Predictor API'}
 
-@app.post('/predict')
+@app.post('/api/v1/predict')
 def predict(data: dict):
     """
     Predicts the class of a given set of features.

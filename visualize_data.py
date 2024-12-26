@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 DATASOURCE = './data.csv'
+REFERENCE_COLUMN = 'PRB_UTILIZATION'
 TARGET_COLUMN = "LTE_DL_USER_THROUGHPUT_kbps"
 MODEL_NAME = "./app/model.joblib"
 BAND_COLORS = {
@@ -36,11 +37,11 @@ plt.figure(figsize=(12, 8))
 
 for band, color in BAND_COLORS.items():
     subset = df[df['BAND'] == band]
-    plt.scatter(subset['PRB_UTILIZATION'], subset[TARGET_COLUMN], 
+    plt.scatter(subset[REFERENCE_COLUMN], subset[TARGET_COLUMN], 
                 label=f'Band {band}', color=color, alpha=0.7)
 
-m, b = np.polyfit(df['PRB_UTILIZATION'], df[TARGET_COLUMN], 1)
-plt.plot(df['PRB_UTILIZATION'], m * df['PRB_UTILIZATION'] + b, 
+m, b = np.polyfit(df[REFERENCE_COLUMN], df[TARGET_COLUMN], 1)
+plt.plot(df[REFERENCE_COLUMN], m * df[REFERENCE_COLUMN] + b, 
          color='red', linewidth=2, label='Trend Line')
 
 plt.title('PRB Utilization vs LTE DL User Throughput by Band', fontsize=14)

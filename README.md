@@ -1,9 +1,10 @@
+# Network Metrics Predictor API
 
-# LTE Download Throughput Predictor API
+Network Metrics Predictor API using Machine Learning.
 
-LTE Download Throughput Predictor API using Machine Learning.
+## Project Overview
 
-## Summary
+### LTE Download Throughput Predictor
 
 This project is a proof-of-concept model designed to predict the `Download Throughput` of an LTE site using the following metrics:
 
@@ -26,8 +27,8 @@ This model can be utilized to analyze site metrics and optimize 4G network perfo
 To deploy this project run:
 
 ```bash
-  docker build . -t lte-dl-throughput-predictor-api
-  docker run --name lte-dl-throughput-predictor-api -p 8000:8000 lte-dl-throughput-predictor-api
+  docker build . -t network-metrics-predictor-api
+  docker run --name network-metrics-predictor-api -p 8000:8000 network-metrics-predictor-api
 ```
 
 

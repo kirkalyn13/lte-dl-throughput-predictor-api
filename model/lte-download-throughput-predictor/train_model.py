@@ -7,7 +7,7 @@ import joblib
 
 DATASOURCE = './data.csv'
 TARGET_COLUMN = "LTE_DL_USER_THROUGHPUT_kbps"
-MODEL_NAME = "./app/model.joblib"
+MODEL_NAME = "../../app/lte_download_throughput_predictor_model.joblib"
 COLUMNS = ['PRB_UTILIZATION', 'RRC_USER', 'PAYLOAD', 'LTE_DL_USER_THROUGHPUT_kbps']
 
 # Load data

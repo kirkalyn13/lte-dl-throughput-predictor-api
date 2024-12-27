@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 DATASOURCE = './data.csv'
 REFERENCE_COLUMN = 'PRB_UTILIZATION'
 TARGET_COLUMN = "LTE_DL_USER_THROUGHPUT_kbps"
-MODEL_NAME = "./app/model.joblib"
 BAND_COLORS = {
     700 : 'blue',
     850: 'cyan',

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import joblib
 import numpy as np
 
-model = joblib.load("app/model.joblib")
+model = joblib.load("app/lte_download_throughput_predictor_model.joblib")
 
 app = FastAPI()
 
@@ -14,10 +14,30 @@ def read_root():
     Returns:
         dict: A dictionary containing the API info.
     """
+    return {'message':'Network Metrics Predictor API'}
+
+@app.get('/api/v1/download-throughput')
+def read_download_throughput_root():
+    """
+    Provide API information for LTE Download Throughput Predictor.
+
+    Returns:
+        dict: A dictionary containing the API info.
+    """
     return {'message':'LTE Download Throughput Predictor API'}
 
-@app.post('/api/v1/predict')
-def predict(data: dict):
+@app.get('/api/v1/technology')
+def read_technology_root():
+    """
+    Provide API information for Technology Predictor.
+
+    Returns:
+        dict: A dictionary containing the API info.
+    """
+    return {'message':'Network Metrics Predictor API'}
+
+@app.post('/api/v1/predict/download-throughput')
+def predict_download_throughput(data: dict):
     """
     Predicts the class of a given set of features.
 
